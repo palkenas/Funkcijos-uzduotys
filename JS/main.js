@@ -79,7 +79,7 @@ function task4(number4) {
     }
     return count;
 }
-document.getElementById("task4").innerHTML = task4(100);
+document.getElementById("task4").innerHTML = task4(463);
 
 // pasiklausti kodel is 2 reikia dalinti
 
@@ -133,21 +133,28 @@ console.log("----------sesta uzduotis-----------");
 // skaičius.
 
 function task6() {
-    let arr = [];
+    let arr1 = [];
     for (let i = 0; i < 100; i++) {
         let x = (Math.round(Math.random() * (444)) + 333);
-        arr[i] = x;
+        arr1[i] = x;
     }
-    let temp = "";
-    for (let i = 0; i < arr.length; i++) {
-        if (task4(arr[i]) !== 0) {
-            temp += arr[i];
-        }
-        else {
-            temp += " ";
+    arr2 = [];
+    for (let i = 0; i < arr1.length; i++) {
+        if (task4(arr1[i]) !== 0) {
+            arr2[i] = arr1[i];
         }
     }
-    return arr;
+    return arr2;
 }
 document.getElementById("task6").innerHTML = task6();
 console.log(task6());
+
+// SEPTINTA UZDUOTIS
+
+console.log("----------septinta uzduotis-----------");
+
+// Sugeneruokite atsitiktinio(nuo 10 iki 20) ilgio masyvą, kurio visi, 
+// išskyrus paskutinį, elementai yra atsitiktiniai skaičiai nuo 0 iki 10, 
+// o paskutinis masyvas, kuris generuojamas pagal tokią pat salygą kaip 
+// ir pirmasis masyvas.Viską pakartokite atsitiktinį nuo 10 iki 30  kiekį kartų.
+// Paskutinio masyvo paskutinis elementas yra lygus 0;
